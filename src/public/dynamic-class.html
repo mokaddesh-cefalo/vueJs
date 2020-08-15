@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class assignment using data</title>
+</head>
+<body>
+<div id="main">
+  <button :class="{'is-loading': isLoading}" @click="toogleClass">Toggle Me</button>
+  {{isLoading}}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  var vueApp = new Vue({
+    el: '#main',
+    data: {
+      isLoading: true
+    },
+    methods: {
+      toogleClass() {
+        this.isLoading = this.isLoading !== true;
+      }
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>First Vue file</title>
+</head>
+
+<body>
+<div id="main">
+  <h1>{{ message }}</h1>
+  <label for="input">Message</label>
+  <input type="text" id="input" v-model="message">
+  <br>
+  <hr>
+
+  <ul>
+    <li v-for="name in names"> {{ name }}</li>
+  </ul>
+  <input id="nameInput" type="text" v-model="newName">
+  <button @click="addName " :title="btnTitle">Add</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  var vueApp = new Vue({
+    el: '#main',
+    data: {
+      message: 'Vue!',
+      newName: '',
+      names: ['Joe', "Mary", "Jane", "Jack", "Shovon"],
+      btnTitle: "Inser a new name to list"
+    },
+    methods: {
+      addName: function () {
+        this.names.push(this.newName);
+        this.newName = '';
+      }
+    },
+    mounted() {
+      alert("Ready");
+    }
+  });
+</script>
+</body>
+
+</html>

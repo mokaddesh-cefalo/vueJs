@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class assignment using data</title>
+</head>
+<body>
+<div id="main">
+  <h1>
+    {{reverserMessage}}
+  </h1>
+  <ul>
+    <li v-for="task in tasks" v-text="task.description"></li>
+  </ul>
+  <h2>Remaining</h2>
+  <ul>
+    <li v-for="task in incompleteTask" v-text="task.description"></li>
+  </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  var vueApp = new Vue({
+    el: '#main',
+    data: {
+      message: "Process of solving",
+      tasks: [
+          {description: "Goto codeforces", complete: true},
+          {description: "Find a problem", complete: true},
+          {description: "Write a soln", complete: false},
+          {description: "Submit the soln", complete: false}
+      ]
+    },
+    computed: {
+      reverserMessage() {
+        return this.message.split(' ').reverse().join(' ');
+      },
+      incompleteTask() {
+        return this.tasks.filter(task => !task.complete);
+      }
+    }
+  });
+</script>
+</body>
+</html>
