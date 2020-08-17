@@ -7,7 +7,10 @@
 </head>
 <body>
 <div id="main" class="container">
-  <modal-test v-show="showModal" @close-modal="showModal=false"></modal-test>
+  <modal-test v-show="showModal" @close-modal="showModal=false">
+    <template slot="header">Dude is a person</template>
+    I wish I was a better person.
+  </modal-test>
   <button @click="showModal=true">Show Modal</button>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

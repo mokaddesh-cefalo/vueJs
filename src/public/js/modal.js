@@ -1,14 +1,27 @@
 Vue.component('modal-test', {
-  template: `<div class="modal is-active">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <div class="box">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
-        Nullam condimentum luctus turpis.
-        <button @click="$emit('close-modal')">Close</button>
+  template: `
+    <div class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            <slot name="header">
+              Modal title
+            </slot>
+          </p>
+        </header>
+        <section class="modal-card-body">
+            <slot>
+               Content are content
+            </slot>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button" @click="$emit('close-modal')">Cancel</button>
+        </footer>
       </div>
     </div>
-  </div>`
+  `
 });
 
 new Vue({
