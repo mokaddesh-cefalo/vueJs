@@ -1,5 +1,3 @@
-# https://cli.vuejs.org/
-
 ## Project setup
 ```
 npm install
@@ -22,3 +20,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+##### https://cli.vuejs.org/
+##### https://laracasts.com/series/learn-vue-2-step-by-step
+##### https://bulma.io/documentation/components
