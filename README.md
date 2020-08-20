@@ -24,3 +24,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ##### https://cli.vuejs.org/
 ##### https://laracasts.com/series/learn-vue-2-step-by-step
 ##### https://bulma.io/documentation/components
+##### https://github.com/axios/axios
